@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Build Your House</title>
+		<link rel="icon" href="logotipo.png">
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="estilos.css">
+
+<style>
+  .pro-des{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tit-des {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+   .productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+  }
+  .producto {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    position: relative; /* Añadido para contener el elemento emergente */
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .producto:hover {
+    transform: translateY(-5px);
+  }
+  .producto img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  .producto-info {
+    padding: 15px;
+  }
+  .producto h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  .producto p {
+    color: #666;
+    font-size: 1rem;
+  }
+  .ver-mas {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50; /* Color verde */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  .ver-mas:hover {
+    background-color: #45a049; /* Cambio de color al hacer hover */
+  }
+  .mas-info {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ff5722; /* Color naranja */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  .mas-info:hover {
+    background-color: #f44336; /* Cambio de color al hacer hover */
+  }
+  /* Estilo emergente para el producto principal */
+  .descripcion-emergente {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    right: calc(100% + 10px); /* Ajusta la posición a la derecha */
+    top: 0;
+    transition: right 0.3s ease;
+  }
+  .producto:hover .descripcion-emergente {
+    display: block;
+    right: 100%; /* Muestra la descripción emergente al hacer hover */
+  }
+</style>
+
+
+
+	</head>
+	<body>
+		<header>
+			<div class="container-hero">
+				<div class="container hero">
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte al cliente</span>
+							<span class="number">55-2023-7470</span>
+						</div>
+					</div>
+
+					<div class="container-logo">
+						<i class="fa-solid fa-helmet-safety"></i>
+						<h1 class="logo"><a href="/">Build Your House</a></h1>
+					</div>
+
+					<div class="container-user">
+
+						<a href="index1p.html">
+						<i class="fa-solid fa-user"></i>
+					</a>
+
+					</div>
+
+					
+				</div>
+			</div>
+
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<center>
+					<ul class="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="cementos.html">Cementos</a></li>
+						<li><a href="MatCs.html">Materiales De Construccion</a></li>
+						<li><a href="Hc.html">Herramientas De Construccion</a></li>
+						<li><a href="Hd.html">H.Digitales</a></li>
+					</ul></center>
+
+					<form class="search-form" action="resultados.html" method="GET">
+                <input type="search" name="q" placeholder="Buscar..." />
+                <button type="submit" class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+				</nav>
+			</div>
+		</header>
+
+		<section class="banner">
+			<div class="content-banner">
+				<p>Lo Mejor Para Tu Casa</p>
+				<h2>100% Calidad<br/>De La Mejor Gama</h2>
+				<a href="cementos.html">Comprar ahora</a>
+			</div>
+		</section>
+
+		<main class="main-content">
+			<section class="container container-features">
+				<div class="card-feature">
+					<i class="fa-solid fa-plane-up"></i>
+					<div class="feature-content">
+						<span>Envío gratuito a nivel mundial</span>
+						<p>En pedido superior a $3000 mxn</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Contrareembolso</span>
+						<p>100% garantía de devolución de dinero</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Tarjeta regalo especial</span>
+						<p>Ofrece bonos especiales con regalo</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p>LLámenos 55-2023-7470</p>
+					</div>
+				</div>
+			</section>
+
+		
+
+			<section class="pro-des">
+
+	   <header class="tit-des">
+    <h1>Productos Destacados</h1>
+  </header>
+  
+  <div class="productos">
+    <div class="producto">
+      <img src="cementoC.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>CEMENTO CRUZ AZUL</h3>
+        <p>-Inicio de Fraguado: Aproximadamente 45 minutos a 1.5 horas.</p>
+		<p>-Fin de Fraguado: Aproximadamente 2.5 a 5 horas.</p>
+		<p>-Altamente durable, apto para construcciones que requieren larga vida útil y resistencia a condiciones ambientales adversas.</p>
+        <a href="cementos.html" class="ver-mas">Ver más</a>
+      </div>
+    </div>
+    
+    <div class="producto">
+      <img src="block.png" alt="Producto 2">
+      <div class="producto-info">
+        <h3>ECO-BLOCK</h3>
+        <p>Nuestro producto "Eco-Block" está diseñado con materiales reciclados y es amigable con el medio ambiente.</p>
+        <a href="MatCs.html" class="ver-mas">Ver más</a>
+        <br>
+        <a href="eco.html" class="mas-info">Más info</a>
+        <div class="descripcion-emergente">
+          <p>Detalles adicionales del producto B.</p>
+          <p>Precio: $99.99</p>
+          <p>Disponible en varios colores.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="producto">
+      <img src="carretitllaT.png" alt="Producto 3">
+      <div class="producto-info">
+        <h3>CARRETILLA TRUPER</h3>
+        <p>- Material: Acero con bandeja de polipropileno o acero</p>
+        <p>- Capacidad de Carga: 60 L - 120 L</p>
+        <p>- Dimensiones: 1.2 m x 0.6 m x 0.6 m</p>
+        <p>- Peso: 10 kg - 15 kg</p>
+        <a href="Hc.html" class="ver-mas">Ver más</a>
+      </div>
+    </div>
+  </div>
+	
+
+    </section>
+
+
+			<section class="gallery">
+				<img
+					src="gallery1.jpg"
+					alt="Gallery Img1"
+					class="gallery-img-1"
+				/><img
+					src="gal2.jpg"
+					alt="Gallery Img2"
+					class="gallery-img-2"
+				/><img
+					src="gallery3.jpg"
+					alt="Gallery Img3"
+					class="gallery-img-3"
+				/><img
+					src="gallery4.jpg"
+					alt="Gallery Img4"
+					class="gallery-img-4"
+				/><img
+					src="gallery5.jpg"
+					alt="Gallery Img5"
+					class="gallery-img-5"
+				/>
+
+
+			</section>
+
+			
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Santos Degollado, Pueblo La Magdalena Atlicpac, La Paz, Estado De México C.P. 56525
+							</li>
+							<li>Teléfono: </li>
+							<li>Fax: 55555300</li>
+							<li>EmaiL: buildyourhouse@support.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+
+						<div class="content">
+							<p>
+								Suscríbete a nuestros boletines ahora y mantente al
+								día con nuevas colecciones y ofertas exclusivas.
+							</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+
+							<a href="https://www.youtube.com/channel/UC9ydYCEohImEqwdp2VK1J9A">
+							<button>Suscríbete</button>
+							</a>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						Desarrollado por Alumnos de CECyTEM "La Paz" &copy; 2024
+					</p>
+
+					<img src="payment.png" alt="Pagos">
+				</div>
+			</div>
+		</footer>
+
+		<script
+			src="https://kit.fontawesome.com/81581fb069.js"
+			crossorigin="anonymous"
+		></script>
+
+
+	</body>
+</html>
